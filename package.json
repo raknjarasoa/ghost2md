@@ -20,7 +20,7 @@
     "build": "tsdx build && npm run copy",
     "test": "tsdx test",
     "lint": "tsdx lint src test",
-    "prepare": "tsdx build",
+    "prepare": "tsdx build && npm run copy",
     "copy": "cp -rv bin/ dist/bin/",
     "local": "npm i ./"
   },
