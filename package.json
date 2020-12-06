@@ -17,10 +17,11 @@
   ],
   "scripts": {
     "start": "tsdx watch",
-    "build": "tsdx build",
+    "build": "tsdx build && npm run copy",
     "test": "tsdx test",
     "lint": "tsdx lint src test",
     "prepare": "tsdx build",
+    "copy": "cp -rv bin/ dist/bin/",
     "local": "npm i ./"
   },
   "dependencies": {
