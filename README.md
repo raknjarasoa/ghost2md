@@ -15,6 +15,13 @@
 npm i -D ghost2md # or yarn add -D ghost2md
 ```
 
+2. Set own .env variable. Eg:
+```bash
+# .env
+GHOST_API_URL=https://demo.ghost.io
+GHOST_CONTENT_API_KEY=22444f78447824223cefc48062
+```
+
 2. Setup Scully config file named scully< projectName>.config.ts
 
 ```bash
