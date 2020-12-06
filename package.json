@@ -9,7 +9,7 @@
   "homepage": "github.com/raknjarasoa/ghost2md#Readme",
   "repository": "github.com/raknjarasoa/ghost2md",
   "bin": {
-    "ghost2md": "./bin/index.js"
+    "ghost2md": "./src/bin/index.js"
   },
   "files": [
     "dist",
@@ -21,7 +21,7 @@
     "test": "tsdx test",
     "lint": "tsdx lint src test",
     "prepare": "tsdx build && npm run copy",
-    "copy": "cp -rv bin/ dist/bin/",
+    "copy": "cp -rv src/bin/ dist/bin/",
     "local": "npm i ./"
   },
   "dependencies": {
