@@ -8,6 +8,9 @@
   "module": "dist/ghost2md.esm.js",
   "homepage": "github.com/raknjarasoa/ghost2md#Readme",
   "repository": "github.com/raknjarasoa/ghost2md",
+  "bin": {
+    "ghost2md": "./bin/index.js"
+  },
   "files": [
     "dist",
     "src"
@@ -17,7 +20,8 @@
     "build": "tsdx build",
     "test": "tsdx test",
     "lint": "tsdx lint src test",
-    "prepare": "tsdx build"
+    "prepare": "tsdx build",
+    "local": "npm i ./"
   },
   "dependencies": {
     "@tryghost/content-api": "^1.4.9",
