@@ -1,6 +1,6 @@
 {
   "name": "ghost2md",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Njarasoa Rakotozafy",
   "license": "MIT",
   "main": "dist/index.js",
