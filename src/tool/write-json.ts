@@ -19,3 +19,23 @@ export const writeJson = async (
     console.log(error);
   }
 };
+
+export const writeToMarkdown = async (
+  subFolderName: string,
+  slug: string,
+  rawText: string
+) => {
+  try {
+    mkdirSync(`${GHOST_TMP}/${subFolderName}`, { recursive: true });
+  } catch (error) {}
+
+  try {
+    const outputFileName = `${slug}.md`;
+    await fs.writeFile(
+      `${GHOST_TMP}/${subFolderName}/${outputFileName}`,
+      rawText
+    );
+  } catch (error) {
+    console.log(error);
+  }
+};

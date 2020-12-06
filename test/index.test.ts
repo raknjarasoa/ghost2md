@@ -1,5 +1,6 @@
 import 'dotenv/config';
 import { fetchContent } from '../src';
+import { convertToMarkdown } from '../src/tool/convert-html-to-md';
 
 describe('blah', () => {
   let apiUrl: string;
@@ -15,5 +16,15 @@ describe('blah', () => {
 
     expect(data).toBeDefined();
     expect(data.length).toEqual(5);
+  });
+
+  it('should convert html to markdown', () => {
+    const markdown = convertToMarkdown('<h1>Hello world!</h1>');
+    expect(markdown).toEqual(`Hello world!\n============`);
+  });
+
+  it('should convert <hr /> to * * *', () => {
+    const markdown = convertToMarkdown('<hr />');
+    expect(markdown).toEqual(`* * *`);
   });
 });
